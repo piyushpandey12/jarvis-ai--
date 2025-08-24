@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JARVIS - AI Assistant</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='avatar.png') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Branding -->
+  <div class="brand-container">
+    <div class="gif-circle">
+      <img src="{{ url_for('static', filename='giphy.gif') }}" alt="Jarvis">
+    </div>
+    <span class="brand-name">J A R V I S</span>
+  </div>
+
+  <!-- Chat Area -->
+  <div class="chat-area" id="chatArea"></div>
+
+  <!-- Bottom Input -->
+  <div class="bottom-input">
+    <div class="search-wrapper">
+      <input type="text" id="userInput" placeholder="Ask anything..." autofocus />
+      <div class="icon-group">
+        <button id="micBtn" title="Voice Input 🎤">🎤</button>
+        <div class="send-btn" id="sendBtn" title="Send">➤</div>
+        <button id="locationBtn" class="location-btn" title="Share Location">📍</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
